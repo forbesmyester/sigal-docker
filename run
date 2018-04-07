@@ -1,0 +1,10 @@
+#!/bin/bash
+
+while /bin/true; do
+    mkdir -p /gallery
+    sigal build /pictures /gallery
+    sleep 3600
+done &
+
+lighttpd -D -f lighttpd.conf
+
