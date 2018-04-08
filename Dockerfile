@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y \
     libfreetype6-dev \
     lighttpd \
     wget \
+    parallel \
+    ufraw-batch \
  && rm -rf /var/lib/apt/lists/*
 RUN pip install sigal
 
