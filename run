@@ -1,7 +1,7 @@
 #!/bin/bash
 
 while /bin/true; do
-    find /pictures | grep '\.RW2' | parallel 'ls "{.}.ufraw-batch.jpg" || ufraw-batch --out-type jpg --output "{.}.ufraw-batch.jpg" {}'
+    find /pictures | grep '\.RW2' | parallel 'ls {.}.ufraw-batch.jpg || ufraw-batch --out-type jpg --output {.}.ufraw-batch.jpg {}'
     mkdir -p /gallery
     sigal build /pictures /gallery
     sleep 3600
